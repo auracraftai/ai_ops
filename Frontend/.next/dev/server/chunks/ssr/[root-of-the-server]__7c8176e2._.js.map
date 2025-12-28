@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///Users/nishant/SphereHack%201.0/Frontend/pages/dashboard.js"],"sourcesContent":["import { useEffect, useState } from \"react\"\n\nexport default function Dashboard() {\n  const [deployments, setDeployments] = useState([])\n\n  useEffect(() => {\n    fetch(\"http://localhost:3005/api/deployments\")\n      .then(res => res.json())\n      .then(setDeployments)\n  }, [])\n\n  return (\n    <div style={{ padding: 40 }}>\n      <h2>Deployments</h2>\n      {deployments.map(d => (\n        <div key={d._id}>\n          {d.repo} → {d.platform} → {d.status}\n        </div>\n      ))}\n    </div>\n  )\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACtB,MAAM,CAAC,aAAa,eAAe,GAAG,IAAA,+GAAQ,EAAC,EAAE;IAEjD,IAAA,gHAAS,EAAC;QACR,MAAM,yCACH,IAAI,CAAC,CAAA,MAAO,IAAI,IAAI,IACpB,IAAI,CAAC;IACV,GAAG,EAAE;IAEL,qBACE,qKAAC;QAAI,OAAO;YAAE,SAAS;QAAG;;0BACxB,qKAAC;0BAAG;;;;;;YACH,YAAY,GAAG,CAAC,CAAA,kBACf,qKAAC;;wBACE,EAAE,IAAI;wBAAC;wBAAI,EAAE,QAAQ;wBAAC;wBAAI,EAAE,MAAM;;mBAD3B,EAAE,GAAG;;;;;;;;;;;AAMvB"}}]
+}

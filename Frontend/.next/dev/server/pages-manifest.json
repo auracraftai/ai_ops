@@ -1,0 +1,10 @@
+{
+  "/": "pages/index.js",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/dashboard": "pages/dashboard.js",
+  "/github": "pages/github.js",
+  "/login": "pages/login.js",
+  "/platform": "pages/platform.js",
+  "/signup": "pages/signup.js"
+}
